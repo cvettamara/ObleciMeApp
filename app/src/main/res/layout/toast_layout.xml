@@ -1,0 +1,8 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toastText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="#4D144E"
+    android:padding="10dp"
+    android:textSize="18sp"
+    android:fontFamily="@font/greatvibes_regular" />    <!-- Specify the custom font here -->

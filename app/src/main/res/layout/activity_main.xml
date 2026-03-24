@@ -1,78 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pozadinaapp"
+    android:background="@drawable/pozadina_main"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="32dp"
     tools:ignore="ExtraText">
-
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo_app"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="-30dp"  />
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/logo_app" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/edittext_background"
-        android:fontFamily="@font/greatvibes_regular"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:padding="12dp"
+        android:minHeight="52dp"
+        android:padding="14dp"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
-
+        android:textSize="16sp" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/edittext_background"
-        android:fontFamily="@font/greatvibes_regular"
         android:hint="Password"
         android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:padding="12dp"
+        android:minHeight="52dp"
+        android:padding="14dp"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="164dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_rounded"
         android:contentDescription="Login button"
-        android:padding="8dp"
+        android:padding="10dp"
         android:text="Login"
         android:fontFamily="@font/greatvibes_regular"
         android:textColor="@android:color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="16sp" />
+        android:textSize="18sp"
+        android:scaleX="1.2"
+        android:scaleY="1.2" />
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="165dp"
-        android:layout_height="48dp"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_rounded_accent"
+        android:fontFamily="@font/greatvibes_regular"
+        android:padding="10dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
         android:text="Register"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@android:color/white"
-        android:fontFamily="@font/greatvibes_regular"
-        android:textSize="16sp"
-        android:padding="8dp"
-        android:layout_marginBottom="12dp" />
+        android:textSize="18sp" />
 
 </LinearLayout>

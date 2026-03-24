@@ -10,25 +10,50 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewClothes"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="417dp"
         android:layout_marginTop="16dp"
-        android:layout_weight="1"
-        android:contentDescription="@string/clothing_item"
-        android:scrollbars="vertical"
-        tools:listitem="@layout/item_clothing" />
+        android:layout_marginBottom="24dp"
+    android:layout_weight="1"
+    android:contentDescription="@string/clothing_item"
+    android:scrollbars="vertical"
+    tools:listitem="@layout/item_clothing" />
 
-    <Button
-        android:id="@+id/btnPickImage"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="pickImage"
-        android:text="Pick Image" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnDressMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Dress Me" />
+        <!-- Pick Image Button -->
+        <ImageButton
+            android:id="@+id/btnPickImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="start"
+            android:layout_marginEnd="90dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_rounded"
+            android:contentDescription="Pick Image"
+            android:onClick="pickImage"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add_photo" />
+
+        <!-- Dress Me Button -->
+        <ImageButton
+            android:id="@+id/btnDressMe"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="90dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/button_rounded"
+            android:contentDescription="Dress Me"
+            android:onClick="dressMe"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/dress1" />
+    </LinearLayout>
 
 </LinearLayout>

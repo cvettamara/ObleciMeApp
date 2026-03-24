@@ -12,9 +12,12 @@ import java.util.List;
 public class ClothesAdapter extends RecyclerView.Adapter<ClothesAdapter.ViewHolder> {
 
     private List<String> clothesImageList;
+    private MojaGarderobaActivity context;  // Correct context
 
-    public ClothesAdapter(List<String> clothesImageList) {
+    // Constructor
+    public ClothesAdapter(List<String> clothesImageList, MojaGarderobaActivity context) {
         this.clothesImageList = clothesImageList;
+        this.context = context;
     }
 
     @NonNull
@@ -28,9 +31,17 @@ public class ClothesAdapter extends RecyclerView.Adapter<ClothesAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String imageUri = clothesImageList.get(position);
 
+        // Use Glide to load the image
         Glide.with(holder.imageView.getContext())
                 .load(imageUri)
                 .into(holder.imageView);
+
+        // Set long click listener for deleting the image
+        holder.itemView.setOnLongClickListener(v -> {
+            // Call the method to delete the image from the database and list
+            context.deleteImage(imageUri);
+            return true; // Indicate that the event was handled
+        });
     }
 
     @Override

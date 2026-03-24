@@ -9,9 +9,9 @@
     <ImageView
         android:id="@+id/imageViewClothing"
         android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_weight="1"
+        android:layout_height="255dp"
         android:layout_marginEnd="8dp"
-        android:scaleType="centerCrop"
-        android:background="@android:color/darker_gray" />
+        android:layout_weight="1"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop" />
 </LinearLayout>

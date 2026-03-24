@@ -11,7 +11,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "userDB";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public static final String TABLE_USERS = "users";
     public static final String COLUMN_ID = "id";
@@ -100,4 +100,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
         return imageList;
     }
+    public boolean deleteClothing(String email, String imageUri) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int result = db.delete(TABLE_CLOTHES, COLUMN_CLOTHES_EMAIL + "=? AND " + COLUMN_CLOTHES_IMAGE_URI + "=?", new String[]{email, imageUri});
+        db.close();
+        return result > 0; // Returns true if the deletion was successful
+    }
+
 }
